@@ -1,2 +1,3 @@
-# Epickyy.github.io
-website source FOSS
+# PLACEHOLDER
+
+Visit [this page](http://epickyy.pw).
