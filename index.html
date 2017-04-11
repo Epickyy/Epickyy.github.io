@@ -1,0 +1,124 @@
+
+
+<!--
+A Finnish-Polish collaboration :^)
+
+Scripts and design by http://jakonen.org/
+
+If you find code syntax and formatting awful,
+bear in mind I am aware of this. :)
+-->
+
+<html>
+<head>
+  <title>Epickyy</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <meta charset="utf-8">
+  <style>
+    body, html {
+      background:url(https://s-media-cache-ak0.pinimg.com/originals/ae/66/a7/ae66a76fc2050ab30c4166909622c8d2.gif);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    #heading {
+        font-family:'Press Start 2P', cursive;
+        font-size:42;
+        color:orangered;
+        padding:30;
+        text-align: center;
+        position:relative;
+        top:28%;
+        text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+      }
+      #menu {
+          font-family:'VT323', cursive;
+          font-size:30;
+          color:#eee;
+          padding:30;
+          text-align: center;
+          position:relative;
+          top:27%;
+          left:-50;
+          text-shadow:1px 1px 2px black;
+        }
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+        #line {
+            font-family:'VT323', cursive;
+            font-size:30;
+            color:orangered;
+            text-align: center;
+            position:relative;
+            top:27%;
+            text-shadow:1px 1px 2px black;
+          }
+	  #cred {
+            position:absolute;
+            color:#fff;
+            opacity:0.6;
+            left:40;
+            bottom:40;
+            font-family:VT323;
+            font-size:23;
+          }
+  </style>
+  </style>
+</head>
+<body onload="musss()">
+  <div id="heading">
+    Epickyy
+  </div>
+  <div id="menu"></div>
+  <div id="line"></div>
+  <script>
+  function musss() {
+    document.getElementById('Epickyy').play();
+    document.getElementById('Epickyy').volume = 0.4;
+  }
+  typer('Epickyy','heading',50);
+  setTimeout(function() {
+    typer("...<a target='newTab' href='http://steamcommunity.com/id/httpgang/'>STEAM</a> /\<br> ...<a target='newTab' href='https://www.youtube.com/channel/UCZWarUNSGorApO_nP0NM_lQ'>YOUTUBE</a> /\<br> ...<a target='newTab' href='http://hashgang.xyz'>SQUAD</a> /\<br> ...<a target='newTab' href='http://s4mi.xyz'>SAMI</a> /",'menu',20);
+  }, 300);
+  setTimeout(function() {
+    typer('============================','line',20);
+  }, 6200);
+  function typer(str,ids,spd) {
+          var arr = str.split(''); //Puts all string characters into an array.
+          var trg = [];
+          var lgg = "";
+          console.log(arr); //Spits out the array of characters for debugging.
+          for (var i = 0; i < arr.length; i++) { //Basic for loop.
+            (function(i){
+                window.setTimeout(function(){ //Set timeout for typing effect.
+                  trg.push(arr[i]); //Add the element of number i to the last position in a new array.
+                  lgg = trg.join(""); //Make the array into a string without commas.
+                  console.log(lgg); //Log all the strings for debugging.
+                  document.getElementById(ids).innerHTML = lgg; //Print onto the page.
+                }, i * spd); //Increase the timeout value each time.
+              }(i));
+          }
+          /*setTimeout(function() { //Cursor at the end of the line.
+            trg.push("_");
+            lgg = trg.join("");
+            document.getElementById(ids).innerHTML = lgg;
+          }, arr.length * spd + 10);*/
+        }
+  </script>
+	  <div id="cred"><a href="http://jakonen.org">by Sami</a></div>
+    <audio id="Epickyy" type="audio/mp3" src="" loop></audio>
+</body>
+</html>
